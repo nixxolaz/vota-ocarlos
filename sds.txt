@@ -1,0 +1,122 @@
+!DOCTYPE html
+html lang=pt-br
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleQuem o Carlos Deve Namorartitle
+    style
+        body {
+            font-family 'Arial', sans-serif;
+            background #fff0f6;
+            margin 0;
+            padding 0;
+            display flex;
+            justify-content center;
+            align-items center;
+            height 100vh;
+            flex-direction column;
+            text-align center;
+        }
+        
+        header {
+            background-color #ff66b2;
+            color white;
+            padding 20px 0;
+            width 100%;
+            font-size 2rem;
+        }
+
+        .container {
+            background #f9e0ec;
+            padding 30px;
+            border-radius 12px;
+            box-shadow 0 4px 8px rgba(0, 0, 0, 0.1);
+            width 100%;
+            max-width 500px;
+        }
+
+        .input-group {
+            margin-bottom 20px;
+        }
+
+        input[type=text] {
+            padding 10px;
+            font-size 1.1rem;
+            width 100%;
+            border-radius 5px;
+            border 2px solid #ff66b2;
+            margin-top 10px;
+        }
+
+        button {
+            padding 10px 20px;
+            background-color #ff66b2;
+            border none;
+            color white;
+            font-size 1.1rem;
+            cursor pointer;
+            border-radius 5px;
+            margin-top 15px;
+        }
+
+        buttonhover {
+            background-color #ff3385;
+        }
+
+        .result {
+            display none;
+            font-size 1.5rem;
+            color #d9534f;
+            margin-top 20px;
+        }
+
+        .heart-icon {
+            color #ff3366;
+            font-size 3rem;
+        }
+
+        footer {
+            margin-top 30px;
+            font-size 0.9rem;
+            color #777;
+        }
+
+    style
+head
+body
+
+headerQuem o Carlos Deve Namorarheader
+
+div class=container
+    pVote agora e diga quem você acha que o Carlos deve namorar! 💖p
+    
+    div class=input-group
+        label for=nomeQual é o nome da pessoa (Digite abaixo)label
+        input type=text id=nome placeholder=Digite um nome...
+    div
+
+    button onclick=mostrarResultado()Votar!button
+
+    div class=result id=resultado
+        pspan class=heart-icon❤️span A votação está completa! O Carlos deve namorar span id=nomeResultadospan!p
+    div
+div
+
+footer
+    pFeito com muito amor 💕 por você!  2024p
+footer
+
+script
+    function mostrarResultado() {
+        var nome = document.getElementById('nome').value;
+        if (nome) {
+            document.getElementById('resultado').style.display = 'block';
+            document.getElementById('nomeResultado').innerText = nome;
+        } else {
+            alert(Por favor, insira um nome antes de votar!);
+        }
+    }
+script
+
+body
+html
